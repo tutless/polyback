@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  polydev:
+    image: tutless/polydev
+    ports:
+      - 3888:3000
+    volumes:
+      - ./:/var/www
+volumes:
+  backend-volume:
