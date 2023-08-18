@@ -12,8 +12,13 @@ export class SupplierController {
         return this.supplierService.saveSupplier(postData)
     }
 
+    @Get()
+    getAllSupplier(){
+        return this.supplierService.getAllSupplier()
+    }
+
     @Get("/:id")
-    getAllSupplier(@Param('id') id:string){
+    getSupplierById(@Param('id') id:string){
         const objId = new mongoose.Types.ObjectId(id)
        return this.supplierService.getSupplierByid(objId)
     }
